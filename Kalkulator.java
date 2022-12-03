@@ -5,28 +5,31 @@ import java.util.Scanner;
 public class Kalkulator {
 
         public static void main(String[] args) {
-
+        	
+        	double l1;
+        	double l2;
+        	double wynik;
+        	char znak;
+        	
             Scanner scanner = new Scanner(System.in);
             
-            System.out.println("Podaj pierwszą liczbę:");
+            System.out.println("Podaj pierwsza liczbe:");
 
-            float l1 = scanner.nextInt();
+            l1 = scanner.nextDouble();
 
-            System.out.println("Podaj drugą liczbę:");
+            System.out.println("Podaj druga liczbe:");
 
-            float l2 = scanner.nextInt();
+            l2 = scanner.nextDouble();
 
-            System.out.println("Podaj znak działania:");
+            System.out.println("Podaj znak dzialania:");
             System.out.println("+ dodawanie");
             System.out.println("- odejmowanie");
-            System.out.println("* mnożenie");
+            System.out.println("* mnozenie");
             System.out.println("/ dzielenie");
             System.out.println("% dzielenie modulo");
-            System.out.println("x wyjście z programu");
+            System.out.println("x zakoncz program");
 
-            char znak = scanner.next().charAt(0);
-            
-            float wynik;
+            znak = scanner.next().charAt(0);
             
             switch (znak) {
             
@@ -52,7 +55,8 @@ public class Kalkulator {
                     break;
             	}
             	if (l2 == 0) {
-            		System.out.println("Błąd: dzielenie przez zero");
+            		System.out.println("Blad: dzielenie przez zero");
+            		break;
             	}
             	
             case '%':
@@ -64,7 +68,7 @@ public class Kalkulator {
             	break;
             	
             default:
-                System.out.println("Nieprawidłowy znak");
+                System.out.println("Nieprawidlowy znak");
                 break;
                 
             }
